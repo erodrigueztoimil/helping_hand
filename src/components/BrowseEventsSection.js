@@ -1,9 +1,9 @@
 //section below the location form where user can view upcoming volunteer events.
-import React from 'react';
-import $ from 'jquery';
-import '../css/BrowseEventsSection.css';
+import React, { Component } from "react";
+import $ from "jquery";
+import "../css/BrowseEventsSection.css";
 
-class BrowseEventsSection extends React.Component {
+class BrowseEventsSection extends Component {
   constructor(props) {
     super(props);
   }
@@ -49,18 +49,18 @@ class BrowseEventsSection extends React.Component {
       <div>
         <h1> Browse Events </h1>
         <table>
-              <tr>
-                <td>Event Name</td>
-                <td>City</td>
-                <td>Description</td>
-                <td>Date</td>
-                <td>City</td>
-                <td>State</td>
-                <td>Type</td>
-                <td>Contact Name</td>
-                <td>Contact Email</td>
-              </tr>
-          {event_records.map((event_record) => {
+          <tr>
+            <td>Event Name</td>
+            <td>City</td>
+            <td>Description</td>
+            <td>Date</td>
+            <td>City</td>
+            <td>State</td>
+            <td>Type</td>
+            <td>Contact Name</td>
+            <td>Contact Email</td>
+          </tr>
+          {event_records.map(event_record => {
             return (
               <tr>
                 <td>{event_record.fields["Event Name"]}</td>
@@ -77,7 +77,7 @@ class BrowseEventsSection extends React.Component {
           })}
         </table>
       </div>
-    )
+    );
   }
 }
 
